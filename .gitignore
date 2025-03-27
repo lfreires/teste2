@@ -12,5 +12,6 @@ env/
 .idea/
 
 teste
+teste.pub
 
 .env
