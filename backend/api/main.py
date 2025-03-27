@@ -4,10 +4,16 @@ from controller.chat_controller import ChatController
 
 app = FastAPI()
 
+# Lista de origens permitidas
+origins = [
+    "https://hackaton2025-iota.vercel.app",
+    "http://localhost:3000",  # Se quiser testar local também
+]
+
 # Libera o CORS para o front (Next.js em localhost:3000)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
